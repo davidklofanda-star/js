@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',               // ← DŮLEŽITÉ PRO WEDOS HOSTING
   reactStrictMode: false,
   typescript: { ignoreBuildErrors: true },
   images: { unoptimized: true },
   devIndicators: false,
+  output: "export",   // ← TOTO JE DŮLEŽITÉ
   allowedDevOrigins: [
     "*.macaly.dev",
     "*.macaly.app",
@@ -16,25 +16,26 @@ const nextConfig = {
       "*.{jsx,tsx}": {
         condition: {
           all: [
-            { not: "foreign" },  // Exclude node_modules
-            "development",        // Only in development mode
+            { not: "foreign" },
+            "development",
           ],
         },
         loaders: [
           {
             loader: "macaly-tagger",
             options: {
-              disableSourceMaps: true,  // Required to avoid Turbopack crashes
+              disableSourceMaps: true,
             },
           },
         ],
-        as: "*",  // Preserve original file handling
+        as: "*",
       },
     },
   },
 };
 
 export default nextConfig;
+
 
 
 
