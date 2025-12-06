@@ -23,9 +23,7 @@ const nextConfig = {
         loaders: [
           {
             loader: "macaly-tagger",
-            options: {
-              disableSourceMaps: true,
-            },
+            options: { disableSourceMaps: true },
           },
         ],
         as: "*",
@@ -35,3 +33,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
