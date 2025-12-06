@@ -4,7 +4,7 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   images: { unoptimized: true },
   devIndicators: false,
-  output: "export", // ← TADY JE KLÍČOVÉ
+  output: "export",
   allowedDevOrigins: [
     "*.macaly.dev",
     "*.macaly.app",
@@ -34,9 +34,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
-
-
-
-
-
+module.exports = nextConfig; // ← Tohle je zásadní
