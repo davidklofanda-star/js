@@ -34,4 +34,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig; // ← Tohle je zásadní
+export default nextConfig;
